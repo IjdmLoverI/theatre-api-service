@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -117,4 +117,4 @@ class Ticket(models.Model):
 
     class Meta:
         unique_together = ("performance", "row", "seat")
-        ordering = ["row, seat"]
+        ordering = ["row", "seat"]
