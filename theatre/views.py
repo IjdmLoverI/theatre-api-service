@@ -49,7 +49,7 @@ class TheatreHallViewSet(
     serializer_class = TheatreHallSerializer
 
 
-class PlayListViewSet(
+class PlayViewSet(
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
     mixins.ListModelMixin,
@@ -112,7 +112,7 @@ class PlayListViewSet(
         return super().list(request, *args, **kwargs)
 
 
-class PersonViewSet(viewsets.ModelViewSet):
+class PerformanceViewSet(viewsets.ModelViewSet):
     queryset = (
         Performance.objects.all()
         .select_related("play", "theatre_hall")
