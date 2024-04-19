@@ -98,12 +98,12 @@ class PlayViewSet(
     @extend_schema(
         parameters=[
             OpenApiParameter(
-                "genres",
+                "genre",
                 type={"type": "list", "items": {"type": "number"}},
                 description="Filter by genre id (ex. ?genres=2,5)",
             ),
             OpenApiParameter(
-                "actors",
+                "actor",
                 type={"type": "list", "items": {"type": "number"}},
                 description="Filter by actor id (ex. ?actors=2,5)",
             ),
